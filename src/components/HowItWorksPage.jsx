@@ -24,7 +24,7 @@ export default function HowItWorksPage() {
       <pre style={pre}>{`npm install
 npm run dev`}</pre>
       <p style={p}>That starts a local server (Vite prints the URL, usually <code>http://localhost:5173</code>).</p>
-      <p style={p}>Live URL: <strong>add your Vercel URL here after deploying</strong></p>
+      <p style={p}>Live URL: <a href="https://spendlens-indol.vercel.app/" target="_blank" rel="noreferrer"><strong>spendlens-indol.vercel.app</strong></a></p>
 
       <h3 style={h3}>File &amp; folder guide</h3>
       <ul style={ul}>

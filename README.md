@@ -2,7 +2,7 @@
 
 A multi-currency expense dashboard built for the Spendlens Product Analyst Intern case study. It converts 20 sample expenses across 10 currencies into USD using a static rate snapshot, ranks spend by category and merchant, and lets you filter, sort, and add new expenses live in the browser.
 
-**Live URL:** _add your Vercel URL here after deploying_
+**Live URL:** https://spendlens-indol.vercel.app/
 **Full written deliverables** (written response, CEO brief, edge cases) are also visible inside the app under the **About / Notes**, **CEO Brief**, and **Edge Cases** tabs — `docs/` below mirrors them as plain markdown.
 
 ## What this project does
