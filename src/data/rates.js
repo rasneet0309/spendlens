@@ -1,4 +1,4 @@
-// rates.js — exchange rates as of 2026-05-01 (base: USD)
+// rates.js, exchange rates as of 2026-05-01 (base: USD)
 // Static snapshot provided as the single source of truth for this assignment.
 export const RATES = {
   USD: 1.0000,

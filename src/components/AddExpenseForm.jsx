@@ -103,7 +103,7 @@ export default function AddExpenseForm({ onAdd, supportedCurrencies, categories 
       )}
       {success && (
         <div style={{ gridColumn: '1 / -1', color: 'var(--emerald)', background: 'var(--emerald-soft)', padding: '8px 12px', borderRadius: 4, fontSize: 13 }}>
-          Added — now reflected in the table and summary above.
+          Added, now reflected in the table and summary above.
         </div>
       )}
     </form>

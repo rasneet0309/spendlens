@@ -9,12 +9,12 @@ const CARD = {
 export default function NotesPage() {
   return (
     <div style={CARD}>
-      <h2 style={{ fontFamily: 'var(--font-display)', fontSize: 22, marginTop: 0 }}>About this build — written response</h2>
+      <h2 style={{ fontFamily: 'var(--font-display)', fontSize: 22, marginTop: 0 }}>About this build, written response</h2>
 
       <h3 style={h3}>How I structured the currency conversion logic, and why</h3>
       <p style={p}>
         All conversion math lives in one function, <code>toUSD(amount, currency, rates)</code> in{' '}
-        <code>src/utils/currency.js</code>, called by every part of the app — summary cards, category table,
+        <code>src/utils/currency.js</code>, called by every part of the app, summary cards, category table,
         top-merchants list, and the sortable expense table. Rates are stored as units of foreign currency per 1
         USD, so conversion is <code>amount / rate</code>. Centralizing it means one place to fix if the
         convention, rounding, or rate source ever changes.
@@ -22,7 +22,7 @@ export default function NotesPage() {
 
       <h3 style={h3}>What would change for a 25th currency</h3>
       <p style={p}>
-        Nothing in the logic — <code>toUSD</code> takes the rates table as a parameter, not hardcoded codes.
+        Nothing in the logic changes, since <code>toUSD</code> takes the rates table as a parameter, not hardcoded codes.
         Adding a currency is a one-line addition to <code>RATES</code>, and it auto-populates the "Add expense"
         dropdown since that reads <code>Object.keys(RATES)</code>. The one exception is the what-if slider,
         currently hardcoded to EUR; generalizing it to any currency would be the natural next step.

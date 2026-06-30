@@ -36,7 +36,7 @@ export default function WhatIfSlider({ eurRate, setEurRate, baseRate }) {
         <span>1.10</span>
       </div>
       <p style={{ fontSize: 13, color: 'var(--ink-soft)', marginTop: 10, marginBottom: 0 }}>
-        Drag to simulate a stronger or weaker euro. Every EUR-denominated expense, the category totals, and the overall total above recalculate live — nothing else in the dataset is affected.
+        Drag to simulate a stronger or weaker euro. Every EUR-denominated expense, the category totals, and the overall total above recalculate live; nothing else in the dataset is affected.
       </p>
     </section>
   );

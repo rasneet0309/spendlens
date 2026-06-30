@@ -87,7 +87,7 @@ export default function Dashboard() {
                   <td style={{ ...tdStyle }} className="mono-num">{row.count}</td>
                   <td style={{ ...tdStyle, fontWeight: 600 }} className="mono-num">{formatUSD(row.totalUSD)}</td>
                   <td style={tdStyle}>
-                    {row.largest ? `${row.largest.merchant} — ${formatUSD(row.largest.usd)}` : '—'}
+                    {row.largest ? `${row.largest.merchant}, ${formatUSD(row.largest.usd)}` : '—'}
                   </td>
                 </tr>
               ))}

@@ -22,13 +22,13 @@ const CASES = [
     title: '3. Rate is null, undefined, or missing for a currency',
     wrong: 'Dividing by undefined produces NaN, which would silently corrupt every total it touches with no visible error.',
     handles: 'toUSD() validates the rate is a finite number > 0 before dividing; invalid rows return { valid: false } and are excluded from totals.',
-    correct: 'Exclude from totals and flag the row explicitly ("rate unavailable") rather than hiding or mis-stating it — implemented.',
+    correct: 'Exclude from totals and flag the row explicitly ("rate unavailable") rather than hiding or mis-stating it. Implemented.',
   },
   {
     title: '4. Add-expense form submitted with empty fields',
     wrong: 'An empty merchant name or missing date would create a confusing blank row in the table.',
     handles: 'Each required field (merchant, amount, date) is validated before the row is added; the first failing check shows a specific error.',
-    correct: 'Reject with a specific, field-level message — implemented for merchant, amount, and date. Currency/category cannot be empty since they\'re dropdowns.',
+    correct: 'Reject with a specific, field-level message. Implemented for merchant, amount, and date. Currency/category cannot be empty since they\'re dropdowns.',
   },
   {
     title: '5. Very large amounts causing display overflow',
@@ -40,7 +40,7 @@ const CASES = [
     title: '6. Filtering with no results',
     wrong: 'If a category filter matched zero rows (e.g. after deleting the only entry in a category, a feature not yet built), the table would render as a confusing empty white box.',
     handles: 'ExpenseTable explicitly checks for a zero-length row list and renders a plain-language "No expenses match this filter" message instead of an empty table.',
-    correct: 'Show an explicit empty state, not a blank table — implemented.',
+    correct: 'Show an explicit empty state, not a blank table. Implemented.',
   },
   {
     title: '7. Narrow mobile screen',
@@ -51,14 +51,14 @@ const CASES = [
   {
     title: '8. Duplicate or near-simultaneous "Add expense" submissions',
     wrong: 'Double-clicking "Add expense" (e.g. on a slow connection) could add the same expense twice with no warning.',
-    handles: 'Not currently handled — each submit adds a new row unconditionally with a fresh incrementing id.',
+    handles: 'Not currently handled, each submit adds a new row unconditionally with a fresh incrementing id.',
     correct: 'Disable the submit button momentarily after click, or de-duplicate identical merchant+amount+date+currency entries within a short window.',
   },
   {
     title: '9. EUR what-if slider at the extremes (0.80 / 1.10)',
     wrong: 'At the slider edges, a large swing in the EUR rate could make the "vs base rate" delta look alarming out of context for a CEO skimming the dashboard.',
-    handles: 'The delta is shown with a sign and percentage so the direction and magnitude are unambiguous, and it only affects EUR-denominated rows — other currencies are untouched, which is called out in the slider copy.',
-    correct: 'Current behaviour is correct; worth adding a one-line caption clarifying this is a simulation, not a saved rate change, if user testing shows confusion.',
+    handles: 'The delta is shown with a sign and percentage so the direction and magnitude are unambiguous, and it only affects EUR-denominated rows, other currencies are untouched, which is called out in the slider copy.',
+    correct: 'Current behaviour is correct; worth adding a one-line caption clarifying this is a simulation, not a saved rate change, if confusion shows up in testing.',
   },
 ];
 
@@ -67,7 +67,7 @@ export default function EdgeCasesPage() {
     <div style={CARD}>
       <h2 style={{ fontFamily: 'var(--font-display)', fontSize: 22, marginTop: 0 }}>Edge Cases &amp; Failure Modes</h2>
       <p style={{ fontSize: 13, color: 'var(--ink-soft)', marginBottom: 20 }}>
-        Bonus section — adversarial review of the dashboard before handoff.
+        Bonus section, adversarial review of the dashboard before handoff.
       </p>
 
       <div style={{ display: 'flex', flexDirection: 'column', gap: 18 }}>

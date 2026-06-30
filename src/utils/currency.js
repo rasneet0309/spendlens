@@ -1,4 +1,4 @@
-// currency.js — all conversion logic lives here, in one place, so the
+// currency.js, all conversion logic lives here, in one place, so the
 // "what if a 25th currency shows up" and "what if a rate is missing"
 // questions only have one file to touch.
 
@@ -12,7 +12,7 @@
  *   instead of throwing or silently returning Infinity/garbage.
  * - negative or non-numeric amount -> also marked invalid, caller decides
  *   how to surface that (we exclude invalid rows from totals and flag them
- *   in the table — see EdgeCases doc).
+ *   in the table, see EdgeCases doc).
  */
 export function toUSD(amount, currency, rates) {
   const rate = rates[currency];
